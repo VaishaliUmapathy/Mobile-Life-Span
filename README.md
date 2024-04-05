@@ -1,27 +1,78 @@
 # Mobile Phone Usage Prediction
+
 ## Introduction
 
-With the increasing complexity and variety of mobile phones available in the market, it becomes challenging for users to estimate the usage lifespan of their devices. This Flask web application aims to address this challenge by providing a simple tool for predicting mobile phone usage based on user-provided features.
 
-The application is built using Flask, a lightweight Python web framework, and employs a machine learning model trained on a dataset containing information about mobile phone characteristics. Users can input details such as storage capacity, battery capacity, brand, etc., and receive a prediction of their phone's usage lifespan.
-This Flask web application predicts mobile phone usage based on various features provided by the user. It utilizes a linear regression model trained on a dataset containing mobile phone characteristics such as storage capacity, battery capacity, brand, etc.
+* With the increasing complexity and variety of mobile phones available in the market, it becomes challenging for users to estimate the usage lifespan of their devices.
 
+* The application is built using Flask, a lightweight Python web framework, and employs a machine learning model trained on a dataset containing information about mobile phone characteristics.
+  
+*  Users can input details such as storage capacity, battery capacity, brand, etc., and receive a prediction of their phone's usage lifespan.
+This Flask web application predicts mobile phone usage based on various features provided by the user.
+
+* It utilizes a linear regression model trained on a dataset containing mobile phone characteristics such as storage capacity, battery capacity, brand, etc.
+
+
+## Project Structure
+
+
+The project folder is organized as follows:
+    project-root/(Folder name of your project)
+    
+        │ ├── app.py # Flask application file
+        │ └── mobile1.csv # Dataset file
+        │
+        ├── static/ # Folder for static files
+        │ ├── style.css # CSS stylesheet
+        │ └── script.js # JavaScript file (if any)
+        │
+        └── templates/ # Folder for HTML templates
+        └── index.html # Main HTML template
+
+
+- (`app.py`) for the Flask application and a dataset (`mobile1.csv`) used for training the machine learning model.
+
+- **static:** This folder contains static files such as CSS (`style.css`) and JavaScript (`script.js`) files. These files are served to the client and are used for styling and client-side functionality.
+
+- **templates:** This folder contains HTML templates, with `index.html` being the main template. These templates are rendered by Flask and served to the client.
+
+  
 ## Getting Started
+
 
 To run this application locally, follow these steps:
 
+
+### Prerequisites
+
+
+Before running the application, ensure you have the following installed:
+
 1. Clone this repository to your local machine.
-2. Ensure you have Python installed. You can download it from [python.org](https://www.python.org/downloads/).
-3. Install the required Python packages by running:
+
+    i) ---bash---
+       git clone https://github.com/VaishaliUmapathy/Mobile-Life-Span.git
+
+    ii)Navigate to the project directory:
+       cd mobile-phone-usage-prediction
+
+
+3. Ensure you have Python installed. You can download it from [python.org](https://www.python.org/downloads/).
+    
+     
+4. Install the required Python packages by running:
     ```
-    pip install -r requirements.txt
+    pip install -r requirements (Flask==2.0.2, pandas==1.3.3, scikit-learn==0.24.2)
     ```
-4. Run the Flask application by executing the following command in your terminal:
+5. Run the Flask application by executing the following command in your terminal:
     ```
     python app.py
     ```
-5. Access the application in your web browser at `http://localhost:5000`.
-6. This formatting will display the commands as separate code blocks, making them stand out and easier to understand for users who want to set up and run your Flask application.
+6. Access the application in your web browser at `http://localhost:5000`.
+
+ 
+7. This formatting will display the commands as separate code blocks, making them stand out and easier to understand for users who want to set up and run your Flask application.
+
 
 
 ## Usage
@@ -52,3 +103,6 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+Feel free to adjust the content according to your specific project details and preferences. This README provides a comprehensive guide for users to understand the project, install dependencies, run the application, and contribute to it.
+
