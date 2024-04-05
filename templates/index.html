@@ -1,0 +1,53 @@
+<!DOCTYPE html><!--correct-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Phone Usage Prediction</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Mobile Phone Usage Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="storage_capacity">Storage capacity of your mobile phone (in GB):</label>
+        <input type="text" id="storage_capacity" name="storage_capacity"><br>
+
+        <label for="battery_capacity">Battery capacity of your mobile phone (in mAh)</label>
+        <input type="text" id="battery_capacity" name="battery_capacity"><br>
+
+        <label for="rate"> Rate the current health of your mobile phone:</label>
+        <input type="text" id="rate" name="rate"><br>
+
+       <label for="repair">Have you repaired your mobile phone?</label>
+        <input type="text" id="repair" name="repair"><br>
+        
+        <label for="repaired">How many times you have repaired your phone?</label>
+        <input type="text" id="repaired" name="repaired"><br>
+
+        <label for="replacement">How frequently do you use your mobile phone on a typical day?</label>
+        <input type="text" id="replacement" name="replacement"><br>
+
+        <label for="charging">How often do you charge your mobile phone in a daily basis?</label>
+        <input type="text" id="charging" name="charging"><br>
+
+        <label for="year">In which year you have purchased your mobile phone?
+        </label>
+        <input type="text" id="year" name="year"><br>
+
+        <label for="app_usage">How many apps do you use on your mobile phone each day?
+        </label>
+        <input type="text" id="app_usage" name="app_usage"><br>
+
+        <label for="brand">Brand of your mobile phone</label>
+        <input type="text" id="brand" name="brand"><br>
+
+        <button type="submit">Predict Lifespan</button>
+        {% if result %}
+            <p> {{ result }}</p>
+        {% endif %}
+    </form>
+
+    
+</body>
+</html>
